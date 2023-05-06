@@ -13,7 +13,10 @@ module.exports = (sequelize, DataTypes) => {
 
       Tree.belongsToMany(
           models.Insect,
-          { through: models.InsectTree }
+          { through: models.InsectTree,
+            foreignKey: 'insectId',
+            otherKey: 'treeId'
+          }
       );
     }
   };

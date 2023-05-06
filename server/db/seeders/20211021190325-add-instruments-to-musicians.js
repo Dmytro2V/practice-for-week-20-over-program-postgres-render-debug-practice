@@ -51,8 +51,9 @@ module.exports = {
     for(let i = 0; i < musicianInstruments.length; i++) {
       const data = musicianInstruments[i];
       const musician =  await Musician.findOne({ where: data.musician });
-      const instruments = await Instrument.findAll({ where: { [Op.or]: data.instruments } });
+      const instruments = await Instrument.findAll({ where: { [Op.or]: data.instruments } });      
       await musician.addInstruments(instruments);
+      
     }
   },
 

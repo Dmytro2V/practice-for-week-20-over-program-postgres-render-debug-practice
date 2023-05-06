@@ -23,6 +23,7 @@ check that the file is properly being ignored by git.**
 
 
 
+
 5. Check schema exists
 
 `\dn`

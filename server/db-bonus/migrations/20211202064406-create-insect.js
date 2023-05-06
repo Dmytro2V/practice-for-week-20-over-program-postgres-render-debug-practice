@@ -20,7 +20,7 @@ module.exports = {
         unique: true,
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       fact: {
         type: Sequelize.STRING
@@ -42,7 +42,7 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal("CURRENT_TIMESTAMP")
       }
-    });
+    }, options);
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Insects', options);
